@@ -10,7 +10,7 @@ I would like to clarify one very important aspect of ricing. We use custom theme
 
 </div>
 
-![HyprXero](https://i.imgur.com/iveWUu8.jpeg)
+![HyprXero](https://i.imgur.com/LBjNQAT.png)
 
 ### ❤️‍🔥 Credits
 
