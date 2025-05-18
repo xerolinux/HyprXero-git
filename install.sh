@@ -194,7 +194,7 @@ if [ -f /etc/sddm.conf ]; then
     grep -q '^\[Theme\]' /etc/sddm.conf && grep -q '^Current=' /etc/sddm.conf || sed -i '/^\[Theme\]/a Current=HyprSDDM' /etc/sddm.conf
 else
     # Create the file with the required content
-    printf '[Theme]\nCurrent=HyprSDDM\n' > /etc/sddm.conf
+   printf '[Theme]\nCurrent=HyprSDDM\n' | sudo tee /etc/sddm.conf > /dev/null
 fi
 
 echo
