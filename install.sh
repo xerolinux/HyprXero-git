@@ -10,7 +10,6 @@ if ! grep -q "\[xerolinux\]" /etc/pacman.conf; then
     echo
     echo "Adding The XeroLinux Repository..."
     echo "##################################"
-    echo
     sleep 3
     echo -e '\n[xerolinux]\nSigLevel = Optional TrustAll\nServer = https://repos.xerolinux.xyz/$repo/$arch' | sudo tee -a /etc/pacman.conf
     sudo sed -i '/^\s*#\s*\[multilib\]/,/^$/ s/^#//' /etc/pacman.conf
@@ -34,6 +33,7 @@ else
     sleep 3
 fi
 
+echo
 echo "Installing Necessary Packages"
 echo "#############################"
 echo
