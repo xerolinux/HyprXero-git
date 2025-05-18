@@ -54,6 +54,7 @@ else
 
   case "$choice" in
     1)
+      echo
       echo "Installing yay..."
       echo
       git clone https://aur.archlinux.org/yay.git
@@ -64,6 +65,7 @@ else
       aur_helper="yay"
       ;;
     2)
+      echo
       echo "Installing paru..."
       echo
       sudo pacman -S --noconfirm rust
