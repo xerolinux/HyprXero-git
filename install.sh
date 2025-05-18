@@ -21,7 +21,7 @@ if ! grep -q "\[xerolinux\]" /etc/pacman.conf; then
     echo
     echo "Updating Pacman Options..."
     echo
-    sudo sed -i '/^# Misc options/,/ParallelDownloads = [0-9]*/c\# Misc options\nColor\nILoveCandy\nCheckSpace\n#DisableSandbox\nDownloadUser = alpm\nDisableDownloadTimeout\nParallelDownloads = 10' /etc/pacman.conf
+    sudo sed -i '/^# Misc options/,/ParallelDownloads = [0-9]*/c\# Misc options\nColor\nILoveCandy\nCheckSpace\n#DisableSandbox\nDisableDownloadTimeout\nParallelDownloads = 10' /etc/pacman.conf
      echo
      echo "Updated /etc/pacman.conf under # Misc options"
      echo
