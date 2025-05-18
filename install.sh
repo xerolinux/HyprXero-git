@@ -184,6 +184,19 @@ fi
 cd ~ && git clone https://github.com/vinceliuice/Layan-gtk-theme.git && cd Layan-gtk-theme/ && sh install.sh -l -c dark -d $HOME/.themes
 cd ~ && rm -Rf Layan-gtk-theme/
 
+echo "Applying HyprXero SDDM theme"
+echo "############################"
+echo
+if [ -f /etc/sddm.conf ]; then
+    # Replace the value after Current= with HyprSDDM (in the [Theme] section)
+    sed -i '/^\[Theme\]/,/^\[/{s/^Current=.*/Current=HyprSDDM/}' /etc/sddm.conf
+    # If Current= is not found in the [Theme] section, append it under [Theme]
+    grep -q '^\[Theme\]' /etc/sddm.conf && grep -q '^Current=' /etc/sddm.conf || sed -i '/^\[Theme\]/a Current=HyprSDDM' /etc/sddm.conf
+else
+    # Create the file with the required content
+    printf '[Theme]\nCurrent=HyprSDDM\n' > /etc/sddm.conf
+fi
+
 echo
 echo "Plz Reboot To Apply Settings..."
 echo "###############################"
