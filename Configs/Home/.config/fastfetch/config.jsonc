@@ -5,9 +5,9 @@
   },
   "logo": {
     "source": "~/.config/fastfetch/Arch.png",
-    "height": 8,
+    "height": 6,
     "padding": {
-      "top": 2,
+      "top": 3,
       "left": 2,
       "right": 2
     }
