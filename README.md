@@ -14,4 +14,4 @@ I would like to clarify one very important aspect of ricing. We use custom theme
 
 ### ❤️‍🔥 Credits
 
-This project was a real labor of love, built with the help of two **Legendary** people I’ve come to respect: [**Array**](hhttps://github.com/aellas) (Config) and [**DDubs**](https://github.com/dwilliam62) (Advisor). Their input and support were crucial at every step, and without their contributions, this wouldn’t have come together the way it did. I’m glad to have worked with them on this. I just created the install script 😇
+This project was a real labor of love, built with the help of two **Legendary** people I’ve come to respect: [**Array**](https://github.com/aellas) (Config) and [**DDubs**](https://github.com/dwilliam62) (Advisor). Their input and support were crucial at every step, and without their contributions, this wouldn’t have come together the way it did. I’m glad to have worked with them on this. I just created the install script 😇
