@@ -5,7 +5,6 @@ set -eu # Exit on error and undefined variables
 echo "##########################################"
 echo "Be Careful this will override your Rice!! "
 echo "##########################################"
-echo
 
 if ! grep -q "\[xerolinux\]" /etc/pacman.conf; then
     echo
@@ -13,7 +12,6 @@ if ! grep -q "\[xerolinux\]" /etc/pacman.conf; then
     echo "##################################"
     echo
     sleep 3
-    echo
     echo -e '\n[xerolinux]\nSigLevel = Optional TrustAll\nServer = https://repos.xerolinux.xyz/$repo/$arch' | sudo tee -a /etc/pacman.conf
     sudo sed -i '/^\s*#\s*\[multilib\]/,/^$/ s/^#//' /etc/pacman.conf
     echo
@@ -22,9 +20,12 @@ if ! grep -q "\[xerolinux\]" /etc/pacman.conf; then
     echo "Updating Pacman Options..."
     echo
     sudo sed -i '/^# Misc options/,/ParallelDownloads = [0-9]*/c\# Misc options\nColor\nILoveCandy\nCheckSpace\n#DisableSandbox\nDisableDownloadTimeout\nParallelDownloads = 10' /etc/pacman.conf
-     echo
      echo "Updated /etc/pacman.conf under # Misc options"
      echo
+     echo "Updating Databases before proceeding..."
+    echo "########################################"
+    echo
+     sudo pacman -Syy
     sleep 3
 else
     echo
