@@ -1,0 +1,1 @@
+waybar noto-fonts-emoji waybar-module-pacman-updates-git wttrbar hyprpolkitagent hyprland hypridle hyprlock waypaper mako mwg-displays nwg-look nwg-menu rofi grimp slurp swaybg kitty kvantum ttf-ubuntu-nerd mako qt5ct qt6ct qt5-wayland qt6-wayland thunar satty swaync wlogout pamixer
