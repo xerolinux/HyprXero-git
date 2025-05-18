@@ -109,7 +109,7 @@ add_fastfetch() {
   local shell_rc="$1"
   if ! grep -Fxq 'fastfetch' "$HOME/$shell_rc"; then
     echo '' >> "$HOME/$shell_rc"
-    echo 'fastfetch' >> "$HOME/$shell_rc"
+    echo 'fastfetch --config ~/.config/hypr/fastfetch/hyprfetch.jsonc' >> "$HOME/$shell_rc"
     echo
     echo "fastfetch has been added to your $shell_rc and will run on Terminal launch."
   else
@@ -147,7 +147,7 @@ echo "Injecting OMP to .bashrc"
 
 # Define the lines to be added
 line1='# Oh-My-Posh Config'
-line2='eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/xero.omp.json)"'
+line2='eval "$(oh-my-posh init bash --config $HOME/.config/hypr/ohmyposh/hyprxero.omp.json)"'
 
 # Define the .bashrc file
 bashrc_file="$HOME/.bashrc"
