@@ -96,6 +96,7 @@ echo "###############################################"
 
 cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/Home/. ~
 sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
+mkdir -p ~/Satty
 
 sleep 2
 echo
