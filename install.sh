@@ -217,9 +217,9 @@ echo "Applying HyprXero SDDM theme"
 echo "############################"
 if [ -f /etc/sddm.conf ]; then
     # Replace the value after Current= with HyprSDDM (in the [Theme] section)
-    sed -i '/^\[Theme\]/,/^\[/{s/^Current=.*/Current=HyprSDDM/}' /etc/sddm.conf
+    sudo sed -i '/^\[Theme\]/,/^\[/{s/^Current=.*/Current=HyprSDDM/}' /etc/sddm.conf
     # If Current= is not found in the [Theme] section, append it under [Theme]
-    grep -q '^\[Theme\]' /etc/sddm.conf && grep -q '^Current=' /etc/sddm.conf || sed -i '/^\[Theme\]/a Current=HyprSDDM' /etc/sddm.conf
+    grep -q '^\[Theme\]' /etc/sddm.conf && grep -q '^Current=' /etc/sddm.conf || sudo sed -i '/^\[Theme\]/a Current=HyprSDDM' /etc/sddm.conf
 else
     # Create the file with the required content
    printf '[Theme]\nCurrent=HyprSDDM\n' | sudo tee /etc/sddm.conf > /dev/null

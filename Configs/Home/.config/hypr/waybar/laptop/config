@@ -91,7 +91,7 @@
 
     "custom/settings": {
         "format": "󱌢",
-	    "on-click": "kitty -c ~/.config/hypr/kitty/kitty.conf xero-cli -m",
+	    "on-click": "kitty -c ~/.config/kitty/kitty.conf xero-cli -m",
         "tooltip": true,
         "tooltip-format": "XeroLinux Toolkit"
     },
