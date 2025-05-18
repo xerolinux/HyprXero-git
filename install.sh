@@ -7,6 +7,32 @@ echo "Be Careful this will override your Rice!! "
 echo "##########################################"
 echo
 
+if ! grep -q "\[xerolinux\]" /etc/pacman.conf; then
+    echo
+    echo "Adding The XeroLinux Repository..."
+    echo "##################################"
+    echo
+    sleep 3
+    echo
+    echo -e '\n[xerolinux]\nSigLevel = Optional TrustAll\nServer = https://repos.xerolinux.xyz/$repo/$arch' | sudo tee -a /etc/pacman.conf
+    sudo sed -i '/^\s*#\s*\[multilib\]/,/^$/ s/^#//' /etc/pacman.conf
+    echo
+    echo "XeroLinux Repository added!"
+    echo
+    echo "Updating Pacman Options..."
+    echo
+    sudo sed -i '/^# Misc options/,/ParallelDownloads = [0-9]*/c\# Misc options\nColor\nILoveCandy\nCheckSpace\n#DisableSandbox\nDownloadUser = alpm\nDisableDownloadTimeout\nParallelDownloads = 10' /etc/pacman.conf
+     echo
+     echo "Updated /etc/pacman.conf under # Misc options"
+     echo
+    sleep 3
+else
+    echo
+    echo "XeroLinux Repository already added."
+    echo
+    sleep 3
+fi
+
 echo "Installing Necessary Packages"
 echo "#############################"
 echo
@@ -57,7 +83,7 @@ echo "Selected AUR helper: $aur_helper"
 echo
 
 # Install packages using the detected AUR helper
-$aur_helper -S --noconfirm --needed ttf-meslo-nerd-font-powerlevel10k imagemagick kvantum unzip jq xmlstarlet fastfetch oh-my-posh-bin gtk-engine-murrine gtk-engines ttf-hack-nerd ttf-fira-code kdeconnect ttf-terminus-nerd noto-fonts-emoji ttf-meslo-nerd waybar noto-fonts-emoji waybar-module-pacman-updates-git wttrbar hyprpolkitagent hyprland hypridle hyprland-protocols hyprpaper hyprpicker hyprsunset pyprland hyprlock waypaper mako nwg-displays nwg-look nwg-menu nwg-dock-hyprland pacman-contrib rofi grim slurp swaybg kitty kitty-terminfo xdg-desktop-portal-hyprland xdg-user-dirs power-profiles-daemon kvantum ttf-ubuntu-nerd mako qt5ct qt6ct qt5-wayland qt6-wayland thunar thunar-archive-plugin thunar-media-tags-plugin thunar-shares-plugin thunar-vcs-plugin thunar-volman satty swaync wlogout pamixer pavucontrol nm-connection-editor tela-circle-icon-theme-purple openssh falkon meld sddm
+$aur_helper -S --noconfirm --needed ttf-meslo-nerd-font-powerlevel10k imagemagick kvantum unzip jq xmlstarlet fastfetch oh-my-posh-bin gtk-engine-murrine gtk-engines ttf-hack-nerd ttf-fira-code kdeconnect ttf-terminus-nerd noto-fonts-emoji ttf-meslo-nerd waybar noto-fonts-emoji waybar-module-pacman-updates-git wttrbar hyprpolkitagent hyprland hypridle hyprland-protocols hyprpaper hyprpicker hyprsunset pyprland hyprlock waypaper mako nwg-displays nwg-look nwg-menu nwg-dock-hyprland pacman-contrib rofi grim slurp swaybg kitty kitty-terminfo xdg-desktop-portal-hyprland xdg-user-dirs power-profiles-daemon kvantum ttf-ubuntu-nerd mako qt5ct qt6ct qt5-wayland qt6-wayland thunar thunar-archive-plugin thunar-media-tags-plugin thunar-shares-plugin thunar-vcs-plugin thunar-volman satty swaync wlogout pamixer pavucontrol nm-connection-editor tela-circle-icon-theme-purple openssh falkon meld sddm gedit xlapit-cli
 
 sudo systemctl enable sddm sshd power-profiles-daemon
 sleep 2
@@ -118,7 +144,7 @@ echo "Injecting OMP to .bashrc"
 
 # Define the lines to be added
 line1='# Oh-My-Posh Config'
-line2='eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/distrous-xero-linux.omp.json)"'
+line2='eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/xero.omp.json)"'
 
 # Define the .bashrc file
 bashrc_file="$HOME/.bashrc"
