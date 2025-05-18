@@ -1,4 +1,4 @@
-# This is XeroLinux's Layan Rice
+# This is XeroLinux's Hyprland Layan Rice
 
 ### Disclaimer
 
@@ -6,8 +6,8 @@ I would like to clarify one very important aspect of ricing. We use custom theme
 
 <div align="center">
 
-# [.:: Click & Follow the Wiki ::.](https://wiki.xerolinux.xyz/rices/)
+# [.:: Click & Follow the Wiki ::.](https://wiki.xerolinux.xyz/hyprxero/)
 
 </div>
 
-![XeroLayan](https://i.imgur.com/VA2tycb.jpeg)
+![HyprXero](https://i.imgur.com/iveWUu8.jpeg)
