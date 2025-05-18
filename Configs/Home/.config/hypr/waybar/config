@@ -61,7 +61,7 @@
       
 "custom/screenshot": {
     "format": "󰄀",
-    "on-click": "grim -g \"$(slurp)\" - | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H-%M-%S').png",
+    "on-click": "grim -g \"$(slurp)\" - | satty --filename - --output-filename ~/Satty/Screenshot-$(date '+%Y%m%d-%H-%M-%S').png",
     "tooltip": true,
     "tooltip-format": "Screenshot Utility"
 

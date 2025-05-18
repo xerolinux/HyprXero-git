@@ -85,7 +85,7 @@ echo "Selected AUR helper: $aur_helper"
 echo
 
 # Install packages using the detected AUR helper
-$aur_helper -S --noconfirm --needed ttf-meslo-nerd-font-powerlevel10k imagemagick kvantum unzip jq xmlstarlet fastfetch oh-my-posh-bin gtk-engine-murrine gtk-engines ttf-hack-nerd ttf-fira-code kdeconnect ttf-terminus-nerd noto-fonts-emoji ttf-meslo-nerd waybar noto-fonts-emoji waybar-module-pacman-updates-git wttrbar hyprpolkitagent hyprland hypridle hyprland-protocols hyprpaper hyprpicker hyprsunset pyprland hyprlock waypaper mako nwg-displays nwg-look nwg-menu nwg-dock-hyprland pacman-contrib rofi grim slurp swaybg kitty xdg-desktop-portal-hyprland xdg-user-dirs power-profiles-daemon kvantum ttf-ubuntu-nerd mako qt5ct qt6ct qt5-wayland qt6-wayland thunar thunar-archive-plugin thunar-media-tags-plugin thunar-shares-plugin thunar-vcs-plugin thunar-volman satty swaync wlogout pamixer pavucontrol nm-connection-editor tela-circle-icon-theme-purple openssh falkon meld sddm gedit xlapit-cli
+$aur_helper -S --noconfirm --needed ttf-meslo-nerd-font-powerlevel10k imagemagick kvantum unzip jq xmlstarlet fastfetch oh-my-posh-bin gtk-engine-murrine gtk-engines ttf-hack-nerd ttf-fira-code kdeconnect ttf-terminus-nerd noto-fonts-emoji ttf-meslo-nerd waybar noto-fonts-emoji waybar-module-pacman-updates-git wttrbar hyprpolkitagent hyprland hypridle hyprland-protocols hyprpaper hyprpicker hyprsunset pyprland hyprlock waypaper mako nwg-displays nwg-look nwg-menu nwg-dock-hyprland pacman-contrib rofi grim slurp swaybg kitty kitty-shell-integration kitty-terminfo xdg-desktop-portal-hyprland xdg-user-dirs power-profiles-daemon kvantum ttf-ubuntu-nerd mako qt5ct qt6ct qt5-wayland qt6-wayland thunar thunar-archive-plugin thunar-media-tags-plugin thunar-shares-plugin thunar-vcs-plugin thunar-volman satty swaync wlogout pamixer pavucontrol nm-connection-editor tela-circle-icon-theme-purple openssh falkon meld sddm gedit xlapit-cli kde-wallpapers
 
 sudo systemctl enable sddm sshd power-profiles-daemon
 sleep 2
@@ -215,7 +215,6 @@ cd ~ && rm -Rf Layan-gtk-theme/
 
 echo "Applying HyprXero SDDM theme"
 echo "############################"
-echo
 if [ -f /etc/sddm.conf ]; then
     # Replace the value after Current= with HyprSDDM (in the [Theme] section)
     sed -i '/^\[Theme\]/,/^\[/{s/^Current=.*/Current=HyprSDDM/}' /etc/sddm.conf
