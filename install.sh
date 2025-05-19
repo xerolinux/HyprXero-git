@@ -184,6 +184,7 @@ if [ -d "/boot/grub" ]; then
     # Clone the repository and install the theme
     sudo ./Grub.sh
     sudo sed -i "s/GRUB_GFXMODE=*.*/GRUB_GFXMODE=1920x1080x32/g" /etc/default/grub
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
 else
     echo "GRUB not detected. Skipping theme installation."
 fi
@@ -216,9 +217,9 @@ fi
 
 cd ~ && git clone https://github.com/vinceliuice/Layan-gtk-theme.git && cd Layan-gtk-theme/ && sh install.sh -l -c dark -d $HOME/.themes
 cd ~ && rm -Rf Layan-gtk-theme/
-
+echo
 echo "Applying HyprXero SDDM theme"
-echo "############################"
+sleep 3
 if [ -f /etc/sddm.conf ]; then
     # Replace the value after Current= with HyprSDDM (in the [Theme] section)
     sudo sed -i '/^\[Theme\]/,/^\[/{s/^Current=.*/Current=HyprSDDM/}' /etc/sddm.conf
