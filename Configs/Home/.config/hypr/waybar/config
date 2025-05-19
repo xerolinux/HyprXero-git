@@ -138,20 +138,20 @@
     },
 
     "clock": {
-        "format": "<span foreground='#ffffff'></span><span> {:%a %d %b %y   |   %I:%M %p}</span>",
+        "format": "<span foreground='#ffffff'></span><span> {:%I:%M %p}</span>",
 
-        "tooltip-format": "{calendar}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month",
             "mode-mon-col": 3,
             "on-scroll": 1,
             "on-click-right": "mode",
             "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "months": "<span color='#4f4c44'><b>{}</b></span>",
+                "days": "<span color='#4f4c44'><b>{}</b></span>",
                 "weeks": "<span color='#99ffdd'><b>{%W}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b>{}</b></span>"
+                "weekdays": "<span color='#ebdbb2'><b>{}</b></span>",
+                "today": "<span color='#ebdbb2'><b>{}</b></span>"
             }
         },
         "actions": {
