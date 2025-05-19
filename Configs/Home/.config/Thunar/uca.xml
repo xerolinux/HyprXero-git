@@ -13,6 +13,17 @@
         <directories/>
     </action>
     <action>
+        <icon>krusader_root</icon>
+        <name>Open folder as Root</name>
+        <submenu></submenu>
+        <unique-id>1747664528757837-1</unique-id>
+        <command>thunar admin://%f</command>
+        <description></description>
+        <range>*</range>
+        <patterns>*</patterns>
+        <directories/>
+    </action>
+    <action>
         <icon>meld</icon>
         <name>Compare Files/Folders</name>
         <submenu></submenu>
