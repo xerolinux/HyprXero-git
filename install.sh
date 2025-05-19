@@ -59,7 +59,7 @@ else
       echo
       git clone https://aur.archlinux.org/yay.git
       cd yay
-      makepkg -si && yay -Y --devel --save && yay -Y --gendb
+      makepkg -si --noconfirm --needed && yay -Y --devel --save && yay -Y --gendb
       cd ..
       rm -rf yay
       aur_helper="yay"
@@ -71,7 +71,7 @@ else
       sudo pacman -S --noconfirm rust
       git clone https://aur.archlinux.org/paru.git
       cd paru
-      makepkg -si && paru --gendb
+      makepkg -si --noconfirm --needed && paru --gendb
       cd ..
       rm -rf paru
       aur_helper="paru"
@@ -83,6 +83,7 @@ else
   esac
 fi
 
+echo
 echo "Selected AUR helper: $aur_helper"
 echo
 
