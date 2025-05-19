@@ -230,6 +230,8 @@ else
    printf '[Theme]\nCurrent=HyprSDDM\n' | sudo tee /etc/sddm.conf > /dev/null
 fi
 
+cd ~ && rm -rf HyprXero-git/
+
 echo
 echo "Plz Reboot To Apply Settings..."
 echo "###############################"
