@@ -56,7 +56,7 @@
         },
         {
           "label": "󰓅",
-          "command": "powerprofilesctl set performance && hyprctl notify -1 3000 'rgb(896989)' 'Performance mode enabled.'"
+          "command": "~/.config/hypr/swaync/scripts/ppd"
         },
         {
           "label": "󰩈",
