@@ -90,7 +90,6 @@ echo
 # Install packages using the detected AUR helper
 $aur_helper -S --noconfirm --needed ttf-meslo-nerd-font-powerlevel10k imagemagick kvantum unzip jq xmlstarlet fastfetch oh-my-posh-bin gtk-engine-murrine gtk-engines ttf-hack-nerd ttf-fira-code ttf-terminus-nerd noto-fonts-emoji ttf-meslo-nerd waybar noto-fonts-emoji waybar-module-pacman-updates-git wttrbar polkit-gnome hyprland hypridle hyprland-protocols hyprpaper hyprpicker hyprsunset pyprland hyprlock waypaper mako nwg-displays nwg-look nwg-menu nwg-dock-hyprland pacman-contrib rofi-wayland grim slurp swaybg kitty kitty-shell-integration kitty-terminfo xdg-desktop-portal-hyprland xdg-user-dirs-gtk power-profiles-daemon kvantum uwsm ttf-ubuntu-nerd mako qt5ct qt6ct qt5-wayland qt6-wayland thunar thunar-archive-plugin thunar-media-tags-plugin thunar-shares-plugin thunar-vcs-plugin thunar-volman satty swaync wlogout pamixer pavucontrol nm-connection-editor tela-circle-icon-theme-purple openssh falkon meld sddm gedit xlapit-cli kde-wallpapers gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-onedrive gvfs-smb gvfs-wsdd tumbler nano neovim-qt fwupd gnome-firmware blueman gnome-disk-utility flatseal yad file-roller networkmanager
 
-xdg-user-dirs-gtk-update
 sudo systemctl enable sddm sshd power-profiles-daemon bluetooth NetworkManager
 sleep 2
 echo
@@ -232,6 +231,8 @@ else
 fi
 
 cd ~ && rm -rf HyprXero-git/
+
+xdg-user-dirs-gtk-update
 
 echo
 echo "Plz Reboot To Apply Settings..."
